@@ -385,3 +385,130 @@ print(10 > 9)
 print(10 == 9)
 print(10 < 9)
 """
+
+v1 = 200
+v2 = 33
+v3 = "Hello"
+v4 = 15
+
+if v2 > v1:
+      print("v2 is greater than v1")
+else:
+      print("v2 is not greater than v2")
+
+#evaluating using bool()
+"""
+Most values are evaluated as True if it has some sort of content
+
+Any string is True, except empty strings.
+
+Any number is True, except 0.
+
+Any list, tuple, set, and dictionary are True, except empty ones.
+"""
+
+print(bool("Hello"))
+print(bool(15))
+
+#evaluating using varibales
+print(bool(v3))
+print(bool(v4))
+
+"""
+Some Values are False
+In fact, there are not many values that evaluate to False, except empty values, such as (), [], {}, "", the number 0, and the value None. And of course the value False evaluates to False.
+bool(False)
+bool(None)
+bool(0)
+bool("")
+bool(())
+bool([])
+bool({})
+"""
+print(bool(False))
+print(bool(None))
+print(bool(0))
+print(bool(""))
+print(bool(()))
+print(bool([]))
+print(bool({}))
+print(bool(''))
+
+"""
+One more value, or object in this case, evaluates to False, and that is if you have an object that is made from a class with a __len__ function that returns 0 or False:
+
+Example
+class myclass():
+  def __len__(self):
+    return 0
+
+myobj = myclass()
+print(bool(myobj))
+"""
+
+#Operators
+"""
+Python Operators
+Operators are used to perform operations on variables and values.
+
+In the example below, we use the + operator to add together two values:
+Example
+print(10 + 5)
+
+Python divides the operators in the following groups:
+
+Arithmetic operators
+Assignment operators
+Comparison operators
+Logical operators
+Identity operators
+Membership operators
+Bitwise operatorsA
+
+
+Operator Precedence
+Operator precedence describes the order in which operations are performed.
+
+Example
+Parentheses has the highest precedence, meaning that expressions inside parentheses must be evaluated first:
+
+print((6 + 3) - (6 + 3))
+
+Example
+Multiplication * has higher precedence than addition +, and therefor multiplications are evaluated before additions:
+
+print(100 + 5 * 3)
+
+Example
+Addition + and subtraction - has the same precedence, and therefor we evaluate the expression from left to right:
+
+print(5 + 4 - 7 + 3)
+
+"""
+print("Multiplication is highr presedence than addition")
+print(100 + 5 * 3)
+
+print("Addiditon and subtraction have the same precedence")
+print(5 + 4 - 7 + 3)
+
+
+
+
+class myclass():
+  def __len__(self):
+    return 0
+  
+  def myFunc():
+       return True
+
+myobj = myclass()
+print("This is another class")
+print(bool(myobj))
+print(bool(myFunc))
+
+if myFunc():
+     print("myFunc returned True")
+else:
+     print("myFunc returned False")
+
+
