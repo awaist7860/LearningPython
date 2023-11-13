@@ -1,3 +1,7 @@
+#importing libraries
+import random
+
+
 print("Hello World")
 
 if 5 > 2:
@@ -95,3 +99,66 @@ def myFunc():
 myFunc()
 
 print(p)
+
+
+#Data types
+"""
+Built-in Data Types
+In programming, data type is an important concept.
+
+Variables can store data of different types, and different types can do different things.
+
+Python has the following data types built-in by default, in these categories:
+
+Text Type:	str
+Numeric Types:	int, float, complex
+Sequence Types:	list, tuple, range
+Mapping Type:	dict
+Set Types:	set, frozenset
+Boolean Type:	bool
+Binary Types:	bytes, bytearray, memoryview
+None Type:	NoneType
+"""
+
+l = 1       #int
+k = 2.8     #float
+f = 1j      #complex
+g = -87.7e10  #Scientific Notation
+print(g)
+print(f)
+
+print(type(l))
+print(type(k))
+print(type(f))
+print(type(g))
+
+
+
+#Type conversion
+#You can convert from one type to another with the int(), float(), and complex() methods
+
+int1 = 1
+float1 = 2.8
+complex1 = 1j
+
+#convert to float from int
+conF = float(int1)
+print(conF)
+print(type(conF))
+
+#convert int from float
+conInt = int(float1)
+print(conInt)
+print(type(conInt))
+
+#convert complex from int
+conComplex = complex(int1)
+print(conComplex)
+print(type(conComplex))
+
+
+
+#random numbers using random library
+print(random.randrange(1, 100))
+
+
