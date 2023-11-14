@@ -491,9 +491,204 @@ print(100 + 5 * 3)
 print("Addiditon and subtraction have the same precedence")
 print(5 + 4 - 7 + 3)
 
+#Python collections
+"""
+Python Collections (Arrays)
+There are four collection data types in the Python programming language:
+
+List is a collection which is ordered and changeable. Allows duplicate members.
+Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
+Set is a collection which is unordered, unchangeable*, and unindexed. No duplicate members.
+Dictionary is a collection which is ordered** and changeable. No duplicate members.
+"""
+#python lists
+"""
+List
+Lists are used to store multiple items in a single variable.
+
+Lists are one of 4 built-in data types in Python used to store collections of data, the other 3 are Tuple, Set, and Dictionary, all with different qualities and usage.
+
+Lists are created using square brackets:
+
+example
+Create a List:
+
+thislist = ["apple", "banana", "cherry"]
+print(thislist)
+
+List Items
+List items are ordered, changeable, and allow duplicate values.
+
+List items are indexed, the first item has index [0], the second item has index [1] etc.
+
+Ordered
+When we say that lists are ordered, it means that the items have a defined order, and that order will not change.
+
+If you add new items to a list, the new items will be placed at the end of the list.
+
+Changeable
+The list is changeable, meaning that we can change, add, and remove items in a list after it has been created.
+
+type()
+From Python's perspective, lists are defined as objects with the data type 'list':
+
+<class 'list'>
+
+"""
+
+myList = ["apple", "banana", "cherry"]
+print(myList)
+
+thisList = ["apple", "banana", "cherry", "apple", "cherry"]
+print(thisList)
+
+print(len(thisList))
+
+list1 = ["apple", "banana", "cherry"]   #string list
+list2 = [1, 5, 7, 9, 3]                 #int list
+list3 = [True, False, False]            #boolean list
+
+list4 = ["abc", 34, True, 40, "male"]   #list with a mix of data types - strings, ints, booleans
+
+print(type(list4))
 
 
+#making a list using the list() constructor
+"""
+The list() Constructor
+It is also possible to use the list() constructor when creating a new list.
 
+Example
+Using the list() constructor to make a List:
+
+thislist = list(("apple", "banana", "cherry")) # note the double round-brackets
+print(thislist)
+"""
+
+createdList = list(("apple", "banana", "orange"))   #created list with double brakes for more than 1 item
+print(createdList)
+
+#access list items
+print(thisList[3])
+
+#negative indexing
+print(thisList[-4]) #goes backwards adn starts from the last item in the lst
+
+#list[a:b]- a = start of index    b = end of index
+#a can be 0
+#b can be 0
+#returning from a range index
+print(thisList[1:4])
+
+print(thisList[:3])
+print(thisList[2:])
+print(thisList[-5:-1])
+
+#checking if items exist in a list
+if "cherry" in thisList:
+      print("Cherry exists")
+
+
+#changing values in a list
+thisList[2] = "Mango"
+print(thisList)
+
+#chnaging a range of items
+thisList[3:5] = ["kiwi", "pear"]
+print(thisList)
+
+if "cherry" in thisList:
+      print("Cherry exists")
+else:
+      print("Cherry does not exist")
+
+#Inserting an item to a list
+"""
+Insert Items
+To insert a new list item, without replacing any of the existing values, we can use the insert() method.
+
+The insert() method inserts an item at the specified index:
+
+Example
+Insert "watermelon" as the third item:
+
+thislist = ["apple", "banana", "cherry"]
+thislist.insert(2, "watermelon")
+print(thislist)
+"""
+
+thisList.insert(1, "Watermelon")
+print(thisList)
+
+#Adding list items
+#using the Append() method
+"""
+Append Items
+To add an item to the end of the list, use the append() method:
+
+Example
+Using the append() method to append an item:
+
+thislist = ["apple", "banana", "cherry"]
+thislist.append("orange")
+print(thislist)
+"""
+
+thisList.append("Orange")
+print(thisList)
+
+#Extending a list
+"""
+Extend List
+To append elements from another list to the current list, use the extend() method.
+
+Example
+Add the elements of tropical to thislist:
+
+thislist = ["apple", "banana", "cherry"]
+tropical = ["mango", "pineapple", "papaya"]
+thislist.extend(tropical)
+print(thislist)
+"""
+
+newList  = ["Mango", "Passion Fruit", "Cocunut"]
+moreFruits = ["Pineapple", "Pomegranate", "Dragon Fruit"]
+print(newList)
+newList.extend(moreFruits)
+print(newList)
+
+#add any iterable to the list by using extend
+thisTuple = ("Kiwi", "Orange", "Apple")
+print(thisTuple)
+newList.extend(thisTuple)
+print(newList)
+
+
+#Removing items using the remove() method
+newList.remove("Apple")
+print(newList)
+
+#removing the last item in the list with the pop() method
+newList.pop()
+print(newList)
+
+#pop(x) removes the specified index
+newList.pop(2)
+
+#the del(x) keyword removes the specified index value
+del newList[3]
+print(newList)
+
+#the del keyword can fully delete a list
+#del newList
+#print(newList)
+
+#the method clear() is used to empty a list of items
+newList.clear()
+print(newList)
+
+
+"""
 class myclass():
   def __len__(self):
     return 0
@@ -511,4 +706,4 @@ if myFunc():
 else:
      print("myFunc returned False")
 
-
+"""
