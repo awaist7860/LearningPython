@@ -493,7 +493,7 @@ print(5 + 4 - 7 + 3)
 
 #Python collections
 """
-Python Collections (Arrays)
+***Python Collections (Arrays)***
 There are four collection data types in the Python programming language:
 
 List is a collection which is ordered and changeable. Allows duplicate members.
@@ -854,6 +854,129 @@ caseList.reverse()
 print(caseList)
 
 #Copying lists
+"""
+Copy a List
+
+You cannot copy a list simply by typing list2 = list1, because: list2 will only be a reference to list1, and changes made in list1 will automatically also be made in list2.
+
+There are ways to make a copy, one way is to use the built-in List method copy().
+"""
+numListNew = [25, 35, 986, 1, 3654, 2578, 2, 10, 458, 20, 98547, 365478214, 12, 1005, 6584]
+copyNumListNew = numListNew.copy()  #Using copy method
+copyNumListNew2 = list(numListNew)  #using the built in method from the list library
+
+print(copyNumListNew)
+print(copyNumListNew2)
+
+#Joining lists
+#Using the + operator
+joinedList1 = copyNumListNew + copyNumListNew2
+print(joinedList1)
+joinedList1.sort()
+print(joinedList1)
+
+for x in copyNumListNew2:
+      joinedList1.append(x)
+
+print(joinedList1)
+
+#useing extend method
+joinedList1.extend(copyNumListNew2)
+print(joinedList1)
+
+"""
+***List Methods***
+
+Python has a set of built-in methods that you can use on lists.
+
+Method	Description
+append()	Adds an element at the end of the list
+clear()	Removes all the elements from the list
+copy()	Returns a copy of the list
+count()	Returns the number of elements with the specified value
+extend()	Add the elements of a list (or any iterable), to the end of the current list
+index()	Returns the index of the first element with the specified value
+insert()	Adds an element at the specified position
+pop()	Removes the element at the specified position
+remove()	Removes the item with the specified value
+reverse()	Reverses the order of the list
+sort()	Sorts the list
+
+"""
+
+#Python Tuples
+"""
+***Tuple***
+
+Tuples are used to store multiple items in a single variable.
+
+Tuple is one of 4 built-in data types in Python used to store collections of data, the other 3 are List, Set, and Dictionary, all with different qualities and usage.
+
+A tuple is a collection which is ordered and unchangeable.
+
+Tuples are written with round brackets.
+"""
+#creating a tuple
+firstTuple = ("apples", "bananas", "cherrys")
+print(firstTuple)
+
+"""
+***Tuple Items***
+Tuple items are ordered, unchangeable, and allow duplicate values.
+
+Tuple items are indexed, the first item has index [0], the second item has index [1] etc.
+
+***Ordered***
+When we say that tuples are ordered, it means that the items have a defined order, and that order will not change.
+
+***Unchangeable***
+Tuples are unchangeable, meaning that we cannot change, add or remove items after the tuple has been created.
+
+***Allow Duplicates***
+Since tuples are indexed, they can have items with the same value:
+
+Example
+Tuples allow duplicate values:
+
+thistuple = ("apple", "banana", "cherry", "apple", "cherry")
+print(thistuple)
+"""
+
+#Duplicate values
+dupTuple = ("apple", "banana", "cherry", "apple", "cherry" , "banana")
+print(dupTuple)
+
+"""
+***Create Tuple With One Item***
+To create a tuple with only one item, you have to add a comma after the item, otherwise Python will not recognize it as a tuple.
+
+Example
+One item tuple, remember the comma:
+
+thistuple = ("apple",)  #remember the comma
+print(type(thistuple))
+
+***#NOT a tuple***
+thistuple = ("apple")
+print(type(thistuple))
+"""
+
+singleTuple = ("Apple",)
+print(singleTuple)
+
+"""
+***The tuple() Constructor***
+It is also possible to use the tuple() constructor to make a tuple.
+
+Example
+Using the tuple() method to make a tuple:
+
+thistuple = tuple(("apple", "banana", "cherry")) # note the double round-brackets
+print(thistuple)
+"""
+
+
+
 
 """
 class myclass():
