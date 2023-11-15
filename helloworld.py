@@ -975,6 +975,139 @@ thistuple = tuple(("apple", "banana", "cherry")) # note the double round-bracket
 print(thistuple)
 """
 
+#Access Tuple Items
+"""
+***Access Tuple Items***
+You can access tuple items by referring to the index number, inside square brackets:
+
+ExampleGet 
+Print the second item in the tuple:
+
+thistuple = ("apple", "banana", "cherry")
+print(thistuple[1])
+"""
+
+print(dupTuple[2])
+
+#Tuples and lists have the same way to access
+
+#Python - Update Tuples
+
+#Tuples are unchangeable, meaning that you cannot change, add, or remove items once the tuple is created.
+#But there are some workarounds.
+
+"""
+***Change Tuple Values***
+Once a tuple is created, you cannot change its values. Tuples are unchangeable, or immutable as it also is called.
+
+But there is a workaround. You can convert the tuple into a list, change the list, and convert the list back into a tuple.
+
+Example
+Convert the tuple into a list to be able to change it:
+
+x = ("apple", "banana", "cherry")
+y = list(x)
+y[1] = "kiwi"
+x = tuple(y)
+
+print(x)
+
+"""
+
+#Creating a tuple
+toBeChangedTuple = ("apple", "banana", "cherry")
+print(toBeChangedTuple)
+
+#converting the tuple into a list
+convertedFromTuple = list(toBeChangedTuple)
+convertedFromTuple[1] = "kiwi"
+convertedFromTuple.append("orange")
+
+#converting back to tuple
+toBeChangedTuple = tuple(convertedFromTuple)
+print(toBeChangedTuple)
+
+
+#Remember to convert to list, then use the list method to modify the tuple, then convert back
+
+#Python - Unpack Tuples
+
+"""
+Unpacking a Tuple
+When we create a tuple, we normally assign values to it. This is called "packing" a tuple:
+
+Example
+Packing a tuple:
+
+fruits = ("apple", "banana", "cherry")
+
+But, in Python, we are also allowed to extract the values back into variables. This is called "unpacking":
+
+Example
+Unpacking a tuple:
+
+fruits = ("apple", "banana", "cherry")
+
+(green, yellow, red) = fruits
+
+print(green)
+print(yellow)
+print(red)
+"""
+#Auto assigning each calue in the tuple to a varibale name
+toBeVar = ("apple", "banana", "cherry")
+print(toBeVar)
+
+(green, yellow, red) = toBeVar
+
+print(green)
+print(yellow)
+print(red)
+
+print("new list after this")
+
+#Now a longer list then variables
+
+toBeVar1 = ("apple", "banana", "cherry", "kiwi", "cherry", "pineapple", "peach", "pear", "apricot")
+
+(orange, blue, white, *pink) = toBeVar1   #the asteris * will convert the items after adn including into a list
+print(orange)
+print(blue)
+print(white)
+print(pink)
+
+print("Asterisk * 2")
+(orange, *blue, white, pink) = toBeVar1   #the asteris * will convert the items after and including into a list until the remaining mathces the variable left to be assigned in this cae 2
+
+print(orange)
+print(blue)
+print(white)
+print(pink)
+
+#Looping a tuple is same as looping through list
+#Joining tuples is same as joining lists
+
+#Multiplying tuples
+
+"""
+***Multiply Tuples***
+If you want to multiply the content of a tuple a given number of times, you can use the * operator:
+
+Example
+Multiply the fruits tuple by 2:
+
+fruits = ("apple", "banana", "cherry")
+mytuple = fruits * 2
+
+print(mytuple)
+"""
+toBeVar2 = ("apple", "banana", "cherry", "kiwi", "cherry", "pineapple", "peach", "pear", "apricot")
+
+multiplyTuple = toBeVar2 * 2
+
+print(multiplyTuple)
+
+#Python Sets
 
 
 
