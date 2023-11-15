@@ -688,6 +688,173 @@ newList.clear()
 print(newList)
 
 
+#Loop lists
+loopList = ["item1", "item2", "item3"]
+
+#for loop
+for x in loopList:
+      print(x)
+
+for i in range(len(loopList)):      #i will be 1 2 and 3
+      print(loopList[i])
+
+#while loop
+iCount = 0
+
+while iCount < len(loopList):
+      print(loopList[iCount])
+      iCount = iCount + 1
+
+#uisng list comprehension
+[print(xCount) for xCount in loopList]
+
+"""
+List Comprehension
+List comprehension offers a shorter syntax when you want to create a new list based on the values of an existing list.
+
+Example:
+
+Based on a list of fruits, you want a new list, containing only the fruits with the letter "a" in the name.
+
+Without list comprehension you will have to write a for statement with a conditional test inside:
+
+Example
+
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = []
+
+for x in fruits:
+  if "a" in x:
+    newlist.append(x)
+
+print(newlist)
+
+With list comprehension you can do all that with only one line of code:
+
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+
+newlist = [x for x in fruits if "a" in x]
+
+print(newlist)
+
+
+****The Syntax****
+
+newlist = [expression for item in iterable if condition == True]
+
+The return value is a new list, leaving the old list unchanged.
+
+***Condition***
+
+The condition is like a filter that only accepts the items that valuate to True.
+Example
+Only accept items that are not "apple":
+
+newlist = [x for x in fruits if x != "apple"]
+
+The condition if x != "apple"  will return True for all elements other than "apple", making the new list contain all fruits except "apple".
+
+*The condition is optional and can be omitted:
+
+Example
+With no if statement:
+
+newlist = [x for x in fruits]
+
+***Iterable***
+The iterable can be any iterable object, like a list, tuple, set etc.
+
+Example
+You can use the range() function to create an iterable:
+
+newlist = [x for x in range(10)]
+
+Same example, but with a condition:
+
+Example
+Accept only numbers lower than 5:
+
+newlist = [x for x in range(10) if x < 5]
+
+***Expression***
+The expression is the current item in the iteration, but it is also the outcome, which you can manipulate before it ends up like a list item in the new list:
+
+Example
+Set the values in the new list to upper case:
+
+newlist = [x.upper() for x in fruits]
+
+You can set the outcome to whatever you like:
+
+Example
+Set all values in the new list to 'hello':
+
+newlist = ['hello' for x in fruits]
+
+The expression can also contain conditions, not like a filter, but as a way to manipulate the outcome:
+
+Example
+Return "orange" instead of "banana":
+
+newlist = [x if x != "banana" else "orange" for x in fruits]
+
+The expression in the example above says:
+
+"Return the item if it is not banana, if it is banana return orange".
+
+"""
+
+#List comprehension
+compList1 = ["mango", "apple", "banana", "kiwi", "cherry"]
+newCompList = [x.upper() for x in compList1 if "a" in x]
+numList = [25, 35, 986, 1, 3654, 2578, 2, 10, 458, 20, 98547, 365478214, 12, 1005, 6584]
+
+print(newCompList)
+
+#sorting a list
+#alphanumerically
+#use sort() method
+
+print(compList1)
+compList1.sort()
+print(compList1)
+
+print(numList)
+numList.sort()
+print(numList)
+
+#sorting descending
+compList1.sort(reverse=True)
+print(compList1)
+
+numList.sort(reverse=True)
+print(numList)
+
+#customizing sort function
+#method for seeing how close a number is to 500
+def myFunc1(n):
+      return abs(n - 500)
+
+numList.sort(key=myFunc1)
+print(numList)
+
+#Case Insensitive Sort
+#By default the sort() method is case sensitive, resulting in all capital letters being sorted before lower case letters:
+
+caseList = ["banana", "Orange", "Kiwi", "cherry"]
+caseList.sort()   #this will sort uper case first then lower case
+print(caseList)
+
+caseList.sort(key=str.lower)  #this will ignore the case
+print(caseList)
+
+#reverse the order of a list
+#this will just flip the list
+caseList.reverse()
+print(caseList)
+
+#Copying lists
+
 """
 class myclass():
   def __len__(self):
