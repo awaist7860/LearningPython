@@ -1699,6 +1699,37 @@ print(thisdict)
 
 """
 
+#Accessing Dictionary Items
+"""
+***Accessing Items***
+You can access the items of a dictionary by referring to its key name, inside square brackets:
+
+Example
+Get the value of the "model" key:
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = thisdict["model"]
+"""
+
+print(thisdict["brand"])
+
+"""
+There is also a method called get() that will give you the same result:
+
+Example
+Get the value of the "model" key:
+
+x = thisdict.get("model")
+"""
+
+#using the get() method
+discX = thisdict.get("year")
+print(discX)
+
 """
 class myclass():
   def __len__(self):
