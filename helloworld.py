@@ -1953,12 +1953,268 @@ print(thisdict)
 
 """
 
+"""
+Python - Loop Dictionaries
+
+Loop Through a Dictionary
+You can loop through a dictionary by using a for loop.
+
+When looping through a dictionary, the return value are the keys of the dictionary, but there are methods to return the values as well.
+
+Example
+
+Print all key names in the dictionary, one by one:
+
+for x in thisdict:
+  print(x)
+
+"""
+
+for x in thisdict:
+      print(x)
+
+"""
+Example
+Print all values in the dictionary, one by one:
+
+for x in thisdict:
+  print(thisdict[x])
+"""
+
+for x in thisdict:
+      print(thisdict[x])
+
+
+"""
+Example
+You can also use the values() method to return values of a dictionary:
+
+for x in thisdict.values():
+  print(x)
+"""
+print("thisDict.values()")
+
+for x in thisdict.values():
+      print(x)
+
+
+"""
+Example
+You can use the keys() method to return the keys of a dictionary:
+
+for x in thisdict.keys():
+  print(x)
+"""
+
+print("thisDict.keys()")
+
+for x in thisdict.keys():
+      print(x)
+
+"""
+Example
+Loop through both keys and values, by using the items() method:
+
+for x, y in thisdict.items():
+  print(x, y)
+
+"""
+
+print("thisDict.items()")
+
+for x, y in thisdict.items():
+      print(x, y)
 
 
 
+"""
+Python - Copy Dictionaries
+
+Copy a Dictionary
+You cannot copy a dictionary simply by typing dict2 = dict1, because: dict2 will only be a reference to dict1, and changes made in dict1 will automatically also be made in dict2.
+
+There are ways to make a copy, one way is to use the built-in Dictionary method copy().
+
+Example
+
+Make a copy of a dictionary with the copy() method:
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+mydict = thisdict.copy()
+print(mydict)
+"""
 
 
+print("Copying dictionaries")
+newDict = thisdict.copy()
 
+for x,y in newDict.items():
+      print(x, y)
+
+
+"""
+Another way to make a copy is to use the built-in function dict().
+
+Example
+Make a copy of a dictionary with the dict() function:
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+mydict = dict(thisdict)
+print(mydict)
+"""
+
+print("Copying dictionaries")
+
+newDict2 = dict(thisdict)
+
+for x, y in newDict2.items():
+      print(x, y)
+
+"""
+Python - Nested Dictionaries
+
+Nested Dictionaries
+A dictionary can contain dictionaries, this is called nested dictionaries.
+
+Example
+
+Create a dictionary that contain three dictionaries:
+
+myfamily = {
+  "child1" : {
+    "name" : "Emil",
+    "year" : 2004
+  },
+  "child2" : {
+    "name" : "Tobias",
+    "year" : 2007
+  },
+  "child3" : {
+    "name" : "Linus",
+    "year" : 2011
+  }
+}
+
+"""
+
+
+nestDict1 = {
+      "nest1" : {
+            "name" : "emily",
+            "year" : 2004
+      },
+      "nest2" : {
+            "name" : "Toby",
+            "year" : 2007
+      },
+      "nest3" : {
+            "name" : "Linus",
+            "year" : 2011
+      }
+}
+
+"""
+Or, if you want to add three dictionaries into a new dictionary:
+
+Example
+Create three dictionaries, then create one dictionary that will contain the other three dictionaries:
+
+child1 = {
+  "name" : "Emil",
+  "year" : 2004
+}
+child2 = {
+  "name" : "Tobias",
+  "year" : 2007
+}
+child3 = {
+  "name" : "Linus",
+  "year" : 2011
+}
+
+myfamily = {
+  "child1" : child1,
+  "child2" : child2,
+  "child3" : child3
+}
+
+"""
+
+item1 = {
+      "name" : "Emil",
+      "year" : 2004
+}
+
+item2 = {
+      "name" : "Toby",
+      "year" : 2007
+}
+
+item3 = {
+      "name" : "linus",
+      "year" : 2011
+}
+
+bigItem = {
+      "item1" : item1,
+      "item2" : item2,
+      "item3" : item3
+}
+
+print("nestDict1")
+for x,y in nestDict1.items():
+      print(x, y)
+
+print("bigItem")
+for x, y in bigItem.items():
+      print(x, y)
+
+
+"""
+Access Items in Nested Dictionaries
+To access items from a nested dictionary, you use the name of the dictionaries, starting with the outer dictionary:
+
+Example
+Print the name of child 2:
+
+print(myfamily["child2"]["name"])
+"""
+print(nestDict1["nest2"]["name"])
+ 
+
+
+"""
+Dictionary Methods
+Python has a set of built-in methods that you can use on dictionaries.
+
+Method	Description
+clear()	Removes all the elements from the dictionary
+copy()	Returns a copy of the dictionary
+fromkeys()	Returns a dictionary with the specified keys and value
+get()	Returns the value of the specified key
+items()	Returns a list containing a tuple for each key value pair
+keys()	Returns a list containing the dictionary's keys
+pop()	Removes the element with the specified key
+popitem()	Removes the last inserted key-value pair
+setdefault()	Returns the value of the specified key. If the key does not exist: insert the key, with the specified value
+update()	Updates the dictionary with the specified key-value pairs
+values()	Returns a list of all the values in the dictionary
+"""
+
+
+"""
+Python If ... Else
+
+
+"""
 
 
 
