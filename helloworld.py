@@ -1801,6 +1801,174 @@ car["color"] = "red"
 print(x) #after the change
 """
 
+"Get Items"
+
+"""
+The items() method will return each item in a dictionary, as tuples in a list.
+
+Example
+Get a list of the key:value pairs
+
+x = thisdict.items()
+
+"""
+print("Getting items using items()")
+print(thisdict.items())
+
+"Checking if a key exist in the dictionary"
+
+if "model" in thisdict:
+      print("Yes, the model is in the dictionary")
+
+"""
+Python - Change Dictionary Items
+
+Change Values
+You can change the value of a specific item by referring to its key name:
+
+Example
+
+Change the "year" to 2018:
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict["year"] = 2018
+"""
+
+thisdict["year"] = 2008
+
+print(thisdict.items())
+print(thisdict["year"])
+
+"""
+
+Update Dictionary
+The update() method will update the dictionary with the items from the given argument.
+
+The argument must be a dictionary, or an iterable object with key:value pairs.
+
+Example
+Update the "year" of the car by using the update() method:
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.update({"year": 2020})
+
+"""
+
+thisdict.update({"model": "GT"})
+print(thisdict["model"])
+
+
+"""
+Python - Add Dictionary Items
+
+Adding Items
+Adding an item to the dictionary is done by using a new index key and assigning a value to it:
+
+Example
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict["color"] = "red"
+print(thisdict)
+"""
+
+thisdict["size"] = "5.0L"
+print(thisdict["size"])
+
+"""
+
+Python - Remove Dictionary Items
+
+Removing Items
+There are several methods to remove items from a dictionary:
+
+Example 1
+
+The pop() method removes the item with the specified key name:
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.pop("model")
+print(thisdict)
+
+Example 2
+
+The popitem() method removes the last inserted item (in versions before 3.7, a random item is removed instead):
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.popitem()
+print(thisdict)
+
+Example 3
+
+The del keyword removes the item with the specified key name:
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+del thisdict["model"]
+print(thisdict)
+
+***The del keyword can also delete the dictionary completely:***
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+del thisdict
+print(thisdict) #this will cause an error because "thisdict" no longer exists.
+
+Example 4
+
+The clear() method empties the dictionary:
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.clear()
+print(thisdict)
+
+"""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 """
 class myclass():
   def __len__(self):
