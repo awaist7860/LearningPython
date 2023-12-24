@@ -3143,9 +3143,81 @@ print(x(5))
 
 """
 
+lambdaX = lambda a : a + 10
+
+print(lambdaX(25))
+
+
+"""
+
+Lambda functions can take any number of arguments:
+
+Example
+Multiply argument a with argument b and return the result:
+
+x = lambda a, b : a * b
+print(x(5, 6))
+
+Example
+Summarize argument a, b, and c and return the result:
+
+x = lambda a, b, c : a + b + c
+print(x(5, 6, 2))
+
+"""
+
+lambdaY = lambda a, b : a * b
+
+print(lambdaY(25, 10) + lambdaX(65))
+
+
+"""
+
+Example
+Summarize argument a, b, and c and return the result:
+
+x = lambda a, b, c : a + b + c
+print(x(5, 6, 2))
+
+"""
+
+
+def lambdaFunction(n):
+      lambadaF = lambda a : a * n
+      return lambadaF(5)
 
 
 
+print(lambdaFunction(656))
+
+
+def blackBoxLambda(h):
+      return lambda a : a * h
+
+myDoubler = blackBoxLambda(2)
+myTripler = blackBoxLambda(3)
+
+print(myDoubler(11))
+print(myTripler(11))
+
+
+
+
+"""
+
+Python Arrays
+
+***Note: Python does not have built-in support for Arrays, but Python Lists can be used instead.***
+
+Arrays
+
+***Note: This page shows you how to use LISTS as ARRAYS, however, to work with arrays in Python you will have to import a library, like the NumPy library.***
+
+Example
+Create an array containing car names:
+
+cars = ["Ford", "Volvo", "BMW"]
+"""
 
 
 
