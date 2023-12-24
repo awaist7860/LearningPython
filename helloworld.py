@@ -3515,5 +3515,25 @@ Delete the p1 object:
 
 del p1
 
+The pass Statement
+class definitions cannot be empty, but if you for some reason have a class definition with no content, put in the pass statement to avoid getting an error.
+
+Example
+class Person:
+  pass
+  
 """
 
+"""
+
+Python Inheritance
+
+Python Inheritance
+
+Inheritance allows us to define a class that inherits all the methods and properties from another class.
+
+Parent class is the class being inherited from, also called base class.
+
+Child class is the class that inherits from another class, also called derived class.
+
+"""
